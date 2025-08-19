@@ -1,4 +1,4 @@
-interface Race {
+export interface Race {
     id: number;
     race: string;
     shortName: string;

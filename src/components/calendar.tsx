@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Paper, Grid, Tooltip } from '@mui/material';
 import { format, differenceInDays, isBefore, isAfter } from 'date-fns';
 import { BLOCKS, MONTHS, RaceCategoryMap, races } from './utils/data.ts';
+import { Race } from './utils/types.ts';
 
 const clampDate = (date: Date, min: Date, max: Date): Date => {
   return isBefore(date, min) ? min : isAfter(date, max) ? max : date;
@@ -18,7 +19,7 @@ const Calendar: React.FC = () => {
 
   return (
     <Box sx={{ p: 2 }}>
-      <Typography variant="h5" gutterBottom>Year Timeline - 2025</Typography>
+      <Typography variant="h5" gutterBottom>Sim Game Calendar - Season 5</Typography>
 
       {/* Toggle button */}
       <Box sx={{ mb: 2 }}>
@@ -60,7 +61,7 @@ const Calendar: React.FC = () => {
               {Array.from({ length: end.getMonth() - start.getMonth() + 1 }).map((_, i) => {
                 const monthIndex = start.getMonth() + i;
                 return (
-                  <Grid key={i} size={{xs:4}}>
+                  <Grid key={i} size={{ xs: 4 }}>
                     <Typography variant="caption" align="center" display="block">
                       {format(new Date(2025, monthIndex, 1), 'MMM')}
                     </Typography>
