@@ -16,7 +16,7 @@ export const BLOCKS = [
     { label: 'Block 2: 9 Mar – 27 Apr', startDate: new Date(2025, 2, 8), endDate: new Date(2025, 3, 26) },
     { label: 'Block 3: 24 Apr – 22 Jun', startDate: new Date(2025, 3, 23), endDate: new Date(2025, 5, 21) },
     { label: 'Block 4: 03 Jul – 31 Aug', startDate: new Date(2025, 6, 2), endDate: new Date(2025, 7, 30) },
-    { label: 'Block 5: 04 Sep – 19 Oct', startDate: new Date(2025, 8, 4), endDate: new Date(2025, 9, 18) },
+    { label: 'Block 5: 04 Sep – 25 Oct', startDate: new Date(2025, 8, 4), endDate: new Date(2025, 9, 20) },
 ];
 
 export const MONTHS = Array.from({ length: 10 }, (_, i) => ({
