@@ -25,13 +25,28 @@ export const MONTHS = Array.from({ length: 10 }, (_, i) => ({
     endDate: endOfMonth(new Date(2025, i, 1)),
 }));
 
-export enum RaceCategory {
-    GRAND_TOUR_RACE = 'Grand Tour Race',
-    WORLD_TOUR_RACE = 'World Tour Race',
-    PRO_TOUR_RACE = 'Pro Tour Race',
-    CONTINENTAL_TOUR_RACE = 'Continental Tour Race',
-    CONTINENTAL_ONLY_RACE = 'Continental Tour Only'
-}
+export const RACE_CATEGORIES = {
+    "Grand Tour Race": {
+        label: "Grand Tour Race",
+        color: "#ffff00",
+    },
+    "World Tour Race": {
+        label: "World Tour Race",
+        color: "#ff0000",
+    },
+    "Pro Tour Race": {
+        label: "Pro Tour Race",
+        color: "#FFFF",
+    },
+    "Continental Tour Race": {
+        label: "Continental Tour Race",
+        color: "#00B0F0",
+    },
+    "Continental Tour Only": {
+        label: "Continental Tour Only",
+        color: "#ffc000",
+    },
+} as const;
 
 export enum RaceCategoryColor {
     GRAND_TOUR = '#ffff00',
@@ -40,12 +55,3 @@ export enum RaceCategoryColor {
     CONTINENTAL_TOUR = '#00B0F0',
     CONTINENTAL_ONLY = '#ffc000',
 }
-
-// Optional: a mapping from descriptive text to the enum
-export const RaceCategoryMap: Record<RaceCategory, RaceCategoryColor> = {
-    [RaceCategory.GRAND_TOUR_RACE]: RaceCategoryColor.GRAND_TOUR,
-    [RaceCategory.WORLD_TOUR_RACE]: RaceCategoryColor.WORLD_TOUR,
-    [RaceCategory.PRO_TOUR_RACE]: RaceCategoryColor.PRO_TOUR,
-    [RaceCategory.CONTINENTAL_TOUR_RACE]: RaceCategoryColor.CONTINENTAL_TOUR,
-    [RaceCategory.CONTINENTAL_ONLY_RACE]: RaceCategoryColor.CONTINENTAL_ONLY,
-};
